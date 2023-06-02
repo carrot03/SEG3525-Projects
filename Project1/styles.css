@@ -1,5 +1,5 @@
 *{
-    background-color: #F8F9F9;
+    background-color: transparent;
 }
 
 /* Navigation Section */
@@ -46,12 +46,12 @@
   .bar a:hover,
   .bar a:focus {
     width: 100%;
-    color: rgb(144, 102, 140);
+    color: #dbbdac;
   }
 
   .bar a:hover::after,
   .bar a:focus::after{
-    opacity:1;
+    opacity:3;
   }
 
 /* Footer Section */
@@ -164,4 +164,126 @@
 .socialmedia a:link {
   color: white;
   text-decoration: none;
+}
+
+/* Home section */
+.home {
+  background-color: black;
+  width: 100%;
+  height: 35rem;
+  position: relative;
+  top: 100%;
+  left: 0px;
+  border: none;
+  margin-top: 0.015rem;
+}
+
+
+.figure {
+  background-color: black;
+  width: 36.85%;
+  height: 20%;
+  float: right;
+  border: none;
+  object-fit: none;
+}
+
+.home__txt {
+  background-color: transparent;
+  width: fit-content;
+  height: fit-content;
+  padding: 0 9rem;
+  
+}
+.home__txt p2, p3 {
+  background-color: transparent;
+  color: #F8F9F9;
+}
+
+.home__txt p2 {
+  font-size: 3rem;
+  opacity: 1;
+  width: 55rem;
+}
+
+.home__txt p3{
+  margin-top: 4.5rem;
+  width: 30rem;
+  font-size: large;
+}
+
+.home__txt button {
+  margin-top: 1rem;
+}
+.acceuil {
+  background-image: url(https://demo2wpopal.b-cdn.net/bedove/wp-content/uploads/2021/05/h1_shape-1.png);
+  background-position: top left;
+  background-repeat: no-repeat;
+  padding: 2rem 4rem;
+  width: 100%;
+  height: 50rem;
+  background-color:#F8F9F9;
+}
+
+
+.acceuil__container__txt {
+  float: right;
+  position: relative;
+  margin-top: 4rem;
+  justify-content: end;
+  margin-right: 10rem;
+  background-color: transparent;
+}
+.acceuil__container__txt h5{
+  font: initial;
+  font-size: xxx-large;
+  background-color: transparent;
+}
+.acceuil__container__txt p{
+  width: 35rem;
+  background-color: transparent;
+}
+.widget__container {
+  float: left;
+  display: block;
+  width: 23rem;
+  height: 45rem;
+  align-items: center;
+  display: flex;
+  margin-left: 5rem;
+  background-color: transparent;
+}
+
+.widget__one {
+  z-index: 1;
+  background-color: transparent;
+}
+.widget__container>.widget__one img {
+  vertical-align: middle;
+  display: inline-block;
+  width: 20rem;
+  height: 33rem;
+  border-style: solid;
+  border-width: 8px;
+  border-color: #F8F9F9;  
+  background-color: transparent;
+}
+
+.elementor-widget-container {
+  text-align: left;
+  margin-left: 2rem;
+  position: absolute;
+  margin-top: 6.05rem;
+  z-index: 2;
+}
+
+
+
+
+.elementor-widget-container-sec {
+  text-align: left;
+  margin-left: 18rem;
+  position: absolute;
+  margin-top: 30rem;
+  background-color: transparent;
 }
