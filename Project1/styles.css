@@ -57,7 +57,7 @@
 /* Footer Section */
 .footer {
   width: 100%;
-  height: 5rem;
+  height: 9rem;
   color:rgb(144, 102, 140);
   background-color: #F8F9F9;
   border-top: 1px solid;
@@ -65,11 +65,13 @@
 }
 
 .openhours {
+  margin-top: 1rem;
   text-align: right;
   width:fit-content;
   height: fit-content;
   float:right;
   color: #222222;
+  padding: 0 3rem;
 }
 
 .openhours h1{
@@ -88,15 +90,34 @@
   justify-content:left;
 }
 
+.contactus {
+  margin-top: 1rem;
+  text-align: left;
+  width:fit-content;
+  height: fit-content;
+  float:left;
+  color: #222222;
+  padding: 0 3rem
+}
+
+.contactus h1{
+  font-size: 1.5rem;
+}
+.contactus p1, p2, p3 {
+  font-size: 1rem;
+  list-style: none;
+  display: flex;
+  justify-content:left;
+}
+
 .socialmedia__container {
-  width: 100%;
-  height: 4rem;
   list-style: none;
   display: flex;
   align-items: center;
   text-align: center;
-  margin-left: -1rem;
-  flex-direction: column;
+  justify-content: center;
+  place-content: center;
+  width: -webkit-fill-available;
 }
 
 .socialmedia {
@@ -113,11 +134,13 @@
 
 .company {
   list-style: none;
+  margin-left: 26rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
   display: flex;
   align-items: center;
   text-align: center;
-  margin-left: 2rem;
-  margin-bottom: 1rem;
+  justify-content: center;
 }
 
 .socialmedia a {
