@@ -221,11 +221,13 @@
   background-repeat: no-repeat;
   padding: 2rem 4rem;
   width: 100%;
-  height: 50rem;
+  height: 53rem;
   background-color:#F8F9F9;
 }
 
-
+.acceuil__container__all{
+  width: fit-content;
+}
 .acceuil__container__txt {
   float: right;
   position: relative;
@@ -241,6 +243,7 @@
 }
 .acceuil__container__txt p{
   width: 35rem;
+  font-size: 1.1rem;
   background-color: transparent;
 }
 .widget__container {
@@ -252,6 +255,7 @@
   display: flex;
   margin-left: 5rem;
   background-color: transparent;
+  position: absolute;
 }
 
 .widget__one {
@@ -277,13 +281,65 @@
   z-index: 2;
 }
 
-
-
-
 .elementor-widget-container-sec {
   text-align: left;
   margin-left: 18rem;
   position: absolute;
   margin-top: 30rem;
   background-color: transparent;
+}
+
+.ceo__txt {
+  float: right;
+  position: relative;
+  margin-right: 2rem;
+  margin-left: 50rem;
+  background-color: transparent;
+  
+}
+.txt {
+  width: 30rem;
+  margin-left: -35rem;
+  margin-top: 4rem;
+  position: absolute;
+}
+.ceo__txt h6{
+  font: initial;
+  font-size: xxx-large;
+  background-color: transparent;
+  float: left;
+  position: relative;
+}
+.ceo__txt p{
+  width: 35rem;
+  font-size: 1.1rem;
+  background-color: transparent;
+  float: left;
+}
+
+.ceo__txt img {
+  border-radius: 100%;
+  float: inherit;
+  margin-top: 2rem;
+  margin-right: -4rem;
+}
+
+/* Services section*/
+
+.container-all {
+  background-color: #efe1da;
+}
+
+
+.card {
+  transition: .5s;
+  box-shadow: #000000;
+  
+}
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card img{
+  justify-content: center;
 }
