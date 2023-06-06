@@ -1,6 +1,5 @@
-var card = document.getElementById('card-btn');
 
-document.getElementById('flip-btn').addEventListener('click', function() {
-    //card.classList.toggle('card-back');
-    console.log("hcnisd");
-}, false);
+function showMore(){
+    elem=document.getElementById('showMore')
+    elem.removeAttribute('hidden')
+}
