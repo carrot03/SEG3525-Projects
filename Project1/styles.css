@@ -46,7 +46,7 @@
   .bar a:hover,
   .bar a:focus {
     width: 100%;
-    color: #dbbdac;
+    color: #;
   }
 
   .bar a:hover::after,
@@ -221,7 +221,7 @@
   background-repeat: no-repeat;
   padding: 2rem 4rem;
   width: 100%;
-  height: 53rem;
+  height: 47rem;
   background-color:#F8F9F9;
 }
 
@@ -412,7 +412,15 @@
 .wrapper {
   background-image: url(https://demo2wpopal.b-cdn.net/bedove/wp-content/uploads/2021/05/h1_bg-1.jpg);
   background-size: cover;
-  padding: 0 10px 0 10px;
+  padding: 10px 10px 10px 10px;
+  width: 90%;
+  border: bisque;
+  margin-left: 5rem;
+  /* margin-top: 1rem; */
+  border-radius: 2rem;
+  height: 25rem;
+  border-style: solid;
+  border-color: black;
 }
 
 .main {
