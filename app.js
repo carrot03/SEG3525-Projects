@@ -22,9 +22,11 @@ function bookPro(proName) {
             elem.options[i].selected = true
         }
     }
+    goto('booking')
 }
 
 function bookService(serviceName) {
+    
     elem = document.getElementById('selectedService')
     console.dir(elem)
     for (i = 0; i < elem.options.length; i++) {
@@ -32,6 +34,7 @@ function bookService(serviceName) {
             elem.options[i].selected = true
         }
     }
+    goto('booking')
 }
 
 function bookingSubmit() {
@@ -39,14 +42,25 @@ function bookingSubmit() {
     email = document.getElementById('userEmail')
     pro = document.getElementById('selectedPro')
 
-    modal = document.getElementById('confirmationModal')
-    modalText = document.getElementById('modalText')
-    modalText.value = "Thank you " + fullName.value + " for booking with " + pro.value + "... A confirmation Email has been sent to: " + email.value
-    modal.role = 'dialog'
-    modal.style.display = "block"
-        //get Service
-        // get Date & time
+     window.alert("Thank you " + fullName.value + " for booking with " + pro.value + "... A confirmation Email has been sent to: " + email.value)
+    
+    //validate time input
+    var timeInput = document.getElementById("timeInput");
+    var dateInput = document.getElementById("dateInput");
+    var timeValue = timeInput.value;
+    var dateInput = dateInput.value;
+    var enteredTime = new Date(dateInput+ " " + timeValue); // Assuming a fixed date for comparison
+    
+    var startTime = new Date(dateInput+" 08:00"); // Define your schedule start time
+    var endTime = new Date(dateInput+" 18:00"); // Define your schedule end time
+    //console.log(startTime + " "+ endTime)
+    if (enteredTime >= startTime && enteredTime <= endTime) {
+      timeInput.setCustomValidity(""); // Time is within schedule
+    } else {
+      timeInput.setCustomValidity("Please enter a time between 08:00 and 18:00"); // Time is outside schedule
+    }
+  }
 
-    // window.alert("Thank you " + fullName.value + " for booking with " + pro.value + "... A confirmation Email has been sent to: " + email.value)
-
+  function goto($hashtag){
+    document.location = "index.html#" + $hashtag;
 }

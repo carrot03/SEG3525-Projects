@@ -126,7 +126,7 @@
         <div class="home__txt">
           <p2 class="fw-bold">Bienvenue dans notre salon de coiffure</p2>
           <p3 class="fw-bold">Commencez votre voyage avec nous en réservant votre premier rendez-vous en cliquant sur le bouton suivant</p3>
-          <button type="button" class="btn btn-outline-light" data-bs-toggle="button" autocomplete="off">Réserver mon rendez-vous</button>
+          <a onclick="goto('booking')" class="btn btn-outline-light" data-bs-toggle="button" >Réserver mon rendez-vous</a>
         </div>
     </div>
 
@@ -156,24 +156,6 @@
     
   </div>
   </div>
-
-  <!-- modal --->
-  <div class="modal fade" id="confirmationModal" tabindex="-1">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Booking confirmation</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body" id="modalText">
-
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
 
       <!-- booking section -->
       
@@ -219,12 +201,12 @@
         </div>
 
         <div class="col-md-6 right" style="
-            margin-top: -16rem;
+            margin-top: -21rem;
           ">
           <div class="input-box">
             <label class="form-label">Coiffeuses
             </label>
-            <select class="form-select" id="selectedPro">
+            <select class="form-select" id="selectedPro" required>
                 <option value="" selected disabled hidden>Choisir une coiffeuse</option>
                 <option value="Neomie">Neomie</option>
                 <option value="Emmanuelle">Emmanuelle</option>
@@ -235,7 +217,7 @@
 
       <label class="form-label">Services
       </label>
-      <select class="form-select" id="selectedService">
+      <select class="form-select" id="selectedService" required>
         
           <option value="" selected disabled hidden>Choisir une service</option>
           <optgroup label="Coupes et mises en plis >"></optgroup>
@@ -252,15 +234,24 @@
       </optgroup>
       </select>
 
-      <div class="col-sm-4">
-        <div class="input-group date" id="datepicker">
-            <input type="text" class="form-control">
+      <div class="col-sm-4" style="
+        width: initial;
+      ">
+      <label class="form-label">Date
+      </label>
+        <div class="input-group date" id="datepicker" >
+            <input type="text" id="dateInput" class="form-control" placeholder="MM/DD/YYYY" required>
             <span class="input-group-append">
                 <span class="input-group-text bg-white d-block">
                     <i class="fa fa-calendar"></i>
                 </span>
             </span>
         </div>
+        <label class="form-label">Time
+        </label>
+        <div>
+        <input type="time" id="timeInput" style="background-color: white; width: -webkit-fill-available;" required>
+      </div>
     </div>
 
       <div class="input-field" style="margin-top:2rem;">
@@ -272,7 +263,7 @@
        <div class="col-md-6 right" style="
        /* margin-left: 22rem; */
        /* margin-bottom: 2rem; */
-       margin-top: -3rem;
+       margin-top: -11rem;
       ">
       <div class="box" style="/* margin-top:-2rem; */margin-left: 1rem;">
         <a href="#coiffeuses" class="btn btn-dark"> En savoir plus les coiffeuses</a>
@@ -340,7 +331,7 @@
           <div class="card-body">
             <h9>Coupe & mise en plis</h9>
             <div class="star">
-              <h10>De 64$ à 75$ avant taxes <a href="#bookingService" type="button" class="btn btn-outline-dark" data-bs-toggle="button" autocomplete="off" onclick="bookService('Coupe & mise en plis')">Choisir Coiffeuse</a></h10>
+              <h10>De 64$ à 75$ avant taxes <a href="#bookingService" type="button" class="btn btn-outline-dark" data-bs-toggle="button" autocomplete="off" onclick="bookService('Coupe & mise en plis')" >Choisir Coiffeuse</a></h10>
             </div>
           </div>
         </div>
@@ -352,7 +343,7 @@
           <div class="card-body">
             <h9>Mise en plis</h9>
             <div class="star">
-              <h10>De 38$ à 53$ avant taxes <a href="#bookingService" type="button" class="btn btn-outline-dark" data-bs-toggle="button" autocomplete="off" onclick="bookService('Coupe & mise en plis')"></span></h10>
+              <h10>De 38$ à 53$ avant taxes <a href="#bookingService" type="button" class="btn btn-outline-dark" data-bs-toggle="button" autocomplete="off" onclick="bookService('Coupe & mise en plis')" ></span></h10>
             </div>
           </div>
         </div>
