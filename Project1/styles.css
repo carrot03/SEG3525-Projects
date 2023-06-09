@@ -574,3 +574,13 @@
 .services {
   max-height: max-content;
 }
+
+/* Services section */
+
+.card-body {
+  flex: 1 1 auto;
+          padding: 1rem 1rem;
+          background-image: url(https://demo2wpopal.b-cdn.net/bedove/wp-content/uploads/2021/05/Home3_image_bg_10.png);
+          box-sizing: border-box;
+          font: message-box;
+}

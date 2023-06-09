@@ -16,6 +16,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+        
       </head>
 
     <body>
@@ -164,7 +165,7 @@
         <hr>
         <div class="wrapper" >
           <div class="container main">
-          <div class="row" style="min-width: -webkit-fill-available;height: 40rem;">
+          <div class="row"  style="min-width: -webkit-fill-available;height: 40rem;">
 
             <div class="col-md-6 left" style="
                 margin-left: 6rem;
@@ -175,22 +176,25 @@
                 <div class="input-field" style="
                 width: max-content;
                 ">
-                  <input type="text" class="input" id="userEmail" required autocomplete="off">
-                  <label for="userEmail">Email</label>
+                  <input type="text" class="input"  id="userEmail" required autocomplete="off">
+                  <label for="userEmail" >Email <span class="required" style="font: icon; color: red;">*</span>
+                  </label>
                 <!--end of input field-->
                 </div>
               
                 <!-- start for the second input -->
                 <div class="input-field">
                   <input type="Password" class="input" id="Password" required >
-                  <label for="Password">Password</label>
+                  <label for="Password">Mot de pass <span class="required" style="font: icon; color: red;">*</span>
+                  </label>
                 <!--end of input field-->
                 </div>
 
                 <!-- start for the third input -->
                 <div class="input-field">
                   <input type="text" class="input" id="username" required >
-                  <label for="username">Nom et Prénom</label>
+                  <label for="username">Nom et Prénom <span class="required" style="font: icon; color: red;">*</span>
+                  </label>
                 <!--end of input field-->
                 </div>
                 
@@ -204,7 +208,7 @@
             margin-top: -21rem;
           ">
           <div class="input-box">
-            <label class="form-label">Coiffeuses
+            <label class="form-label">Coiffeuses <span class="required" style="font: icon; color: red;">*</span>
             </label>
             <select class="form-select" id="selectedPro" required>
                 <option value="" selected disabled hidden>Choisir une coiffeuse</option>
@@ -215,29 +219,29 @@
 
       <!-- start of services section -->
 
-      <label class="form-label">Services
+      <label class="form-label">Services <span class="required" style="font: icon; color: red;">*</span>
       </label>
       <select class="form-select" id="selectedService" required>
         
           <option value="" selected disabled hidden>Choisir une service</option>
-          <optgroup label="Coupes et mises en plis >"></optgroup>
+          <optgroup label="Coupes et mises en plis >">
           <option value="Coupe & mise en plis">Coupe & mise en plis</option>
           <option value="Mise en plis">Mise en plis</option>
           <option value="Frange">Frange</option>
           <option value="Occasion spéciale (mariage & bal)">Occasion spéciale (mariage & bal)</option>
         </optgroup>
-        <optgroup label="Coupes et mises en plis >"></optgroup>
-        <option value="Coupe & mise en plis">Coupe & mise en plis</option>
-        <option value="Mise en plis">Mise en plis</option>
-        <option value="Frange">Frange</option>
-        <option value="Occasion spéciale (mariage & bal)">Occasion spéciale (mariage & bal)</option>
+        <optgroup label="Coloration / Balayage / Mèche >">
+        <option value="Coloration repousse">Coloration repousse</option>
+        <option value="Coloration longueur">Coloration longueur</option>
+        <option value="Balayage / mèches">Balayage / mèches</option>
+        <option value="Nuanceur">Nuanceur</option>
       </optgroup>
       </select>
 
       <div class="col-sm-4" style="
         width: initial;
       ">
-      <label class="form-label">Date
+      <label class="form-label">Date <span class="required" style="font: icon; color: red;">*</span>
       </label>
         <div class="input-group date" id="datepicker" >
             <input type="text" id="dateInput" class="form-control" placeholder="MM/DD/YYYY" required>
@@ -247,15 +251,20 @@
                 </span>
             </span>
         </div>
-        <label class="form-label">Time
+        <label class="form-label">Time <span class="required" style="font: icon; color: red;">*</span>
         </label>
-        <div>
-        <input type="time" id="timeInput" style="background-color: white; width: -webkit-fill-available;" required>
+        <div class="input-group time" >
+          <span data-bs-toggle="tooltip" data-bs-placement="top"
+          data-bs-custom-class="custom-tooltip"
+          data-bs-title="This top tooltip is themed via CSS variables.">
+               <input type="time" id="timeInput" style="background-color: white; width: -webkit-fill-available;" required >
+           </span>
       </div>
     </div>
 
       <div class="input-field" style="margin-top:2rem;">
-        <input type="submit" class="submit" id="submitAppointment" value="Réserve" onclick="bookingSubmit()">
+        <input type="submit" class="btn btn-outline-dark"  style="border-radius: 5rem; border-width: 0.5rem; font-size: larger;" 
+          id="submitAppointment" value="Réserve" onclick="bookingSubmit()"  >
     <!-- end of input field -->
     </div>
       <!-- end of input box-->
@@ -263,7 +272,7 @@
        <div class="col-md-6 right" style="
        /* margin-left: 22rem; */
        /* margin-bottom: 2rem; */
-       margin-top: -11rem;
+       margin-top: -11.5rem;
       ">
       <div class="box" style="/* margin-top:-2rem; */margin-left: 1rem;">
         <a href="#coiffeuses" class="btn btn-dark"> En savoir plus les coiffeuses</a>
@@ -305,7 +314,7 @@
         height: 20rem;
         width: 20rem;
       "> -->
-        <!-- service 1 -->
+        <!-- main service 1 -->
       <!--<div class="image side-left">
         <img style="
         width: -webkit-fill-available; height:20rem;
@@ -317,21 +326,23 @@
       <p>Couper ses cheveux et assumer une coupe, c’est comme porter un morceau de vêtement. Pour certain c’est de demeurer classique, pour d’autre c’est oser et sortir des sentiers battus. Votre coiffeur saura vous guider selon vos attentes, et vous proposer 
         quelque chose qui ira bien avec votre routine quotidienne</p>
       </div>
+      
       <p>
-        <a class="btn btn-primary"  onClick="showMore()">
+        <a class="btn btn-dark"  onClick="showMore('showingSerives1')">
           En savoir plus
         </a>
       </p>
     </div>
-    <div class="row" style="margin-top:30px; display: none" id="showingSerives" >
+    
+    <div class="row" style="display: flex; height: auto; display: none" id="showingSerives1" >
       <!-- service 1 -->
       <div class="col-md-3 py-3 py-md-0">
         <div class="card">
           <!--<img src="/Project1/images/Hair blogger _ Redken hair products, Hair salon tools, Hair salon pictures _ Hair salon pictures, Hair salon tools, Redken hair products (1).jpg" alt="">-->
-          <div class="card-body">
+          <div class="card-body" >
             <h9>Coupe & mise en plis</h9>
             <div class="star">
-              <h10>De 64$ à 75$ avant taxes <a href="#bookingService" type="button" class="btn btn-outline-dark" data-bs-toggle="button" autocomplete="off" onclick="bookService('Coupe & mise en plis')" >Choisir Coiffeuse</a></h10>
+              <h10>De 64$ à 75$ avant taxes <a href="#bookingService" type="button" class="btn btn-outline-dark" data-bs-toggle="button" autocomplete="off" onclick="bookService('Coupe & mise en plis')" >Choisir Service</a></h10>
             </div>
           </div>
         </div>
@@ -343,12 +354,11 @@
           <div class="card-body">
             <h9>Mise en plis</h9>
             <div class="star">
-              <h10>De 38$ à 53$ avant taxes <a href="#bookingService" type="button" class="btn btn-outline-dark" data-bs-toggle="button" autocomplete="off" onclick="bookService('Coupe & mise en plis')" ></span></h10>
+              <h10>De 38$ à 53$ avant taxes <a href="#bookingService" type="button" class="btn btn-outline-dark" data-bs-toggle="button" autocomplete="off" onclick="bookService('Mise en plis')" >Choisir Service</a></h10>
             </div>
           </div>
         </div>
       </div>
-
       <!-- service 3 -->
       <div class="col-md-3 py-3 py-md-0">
         <div class="card">
@@ -356,7 +366,7 @@
           <div class="card-body">
             <h9>Frange</h9>
             <div class="star">
-              <h10>De 19$ à 23,50$ avant taxes<a href="#bookingService" type="button" class="btn btn-outline-dark" data-bs-toggle="button" autocomplete="off" onclick="bookService('Frange')"></h10>
+              <h10>De 19$ à 23,50$ avant taxes <a href="#bookingService" type="button" class="btn btn-outline-dark" data-bs-toggle="button" autocomplete="off" onclick="bookService('Frange')" >Choisir Service</a></h10>
             </div>
           </div>
         </div>
@@ -369,14 +379,100 @@
           <div class="card-body">
             <h9>Occasion spéciale (mariage & bal)</h9>
             <div class="star">
-              <h10>De 75$ à 165$ avant taxes <a href="#bookingService" type="button" class="btn btn-outline-dark" data-bs-toggle="button" autocomplete="off" onclick="bookService('Occasion spéciale (mariage & bal)')"></a></h10>
+              <h10>De 75$ à 165$ avant taxes <a href="#bookingService" type="button" class="btn btn-outline-dark" data-bs-toggle="button" autocomplete="off" onclick="bookService('Occasion spéciale (mariage & bal)')" >Choisir Service</a></h10>
             </div>
           </div>
         </div>
-      </div>      
+      </div>
+     
     </div>
   </div>
+ 
   <!------- coloratione et balayage-->
+  <div class="container" style="margin-top: 20px ;">
+    <hr>
+    <div class="container-txt">
+    <!-- <img src="/Project1/images/How To Create The Classic, Timeless & Traditional Bridal Style.jpg" 
+    style="
+      height: 20rem;
+      width: 20rem;
+    "> -->
+      <!-- main service 2 -->
+    <!--<div class="image side-left">
+      <img style="
+      width: -webkit-fill-available; height:20rem;
+  " src="https://cdn.shopify.com/s/files/1/0624/4279/9337/files/bianca_marois_pour_coupe.jpg?v=1678841118&width=600" alt="">
+    </div>-->
+   
+    <div class="style description">
+    <h11 style="font-weight: 700; font-style: normal; font-family: Georgia, 'Times New Roman', Times, serif
+    ;font-size: larger;">Coloration / Balayage / Mèche</h11>
+    <p1>
+      <p>Quand on parle technique chez Beauté, c’est tout ce qui inclus travailler avec des produits de coloration/décolorant. 
+      On parle de technique de coloration, mèches, balayage, décoloration, nuanceur et glossing à la chaise.</p></p1>
+    </div>
+  
+    
+    <p>
+      <a class="btn btn-dark"  onClick="showMore('showingSerives2')">
+        En savoir plus
+      </a>
+    </p>
+  </div>
+  
+  <div class="row" style="display: flex; height: auto; display: none" id="showingSerives2" >
+    <!-- service 1 -->
+    <div class="col-md-3 py-3 py-md-0">
+      <div class="card">
+        <!--<img src="/Project1/images/Hair blogger _ Redken hair products, Hair salon tools, Hair salon pictures _ Hair salon pictures, Hair salon tools, Redken hair products (1).jpg" alt="">-->
+        <div class="card-body">
+          <h9>Coloration repousse</h9>
+          <div class="star">
+            <h10>80,50$ avant taxes <a href="#bookingService" type="button" class="btn btn-outline-dark" data-bs-toggle="button" autocomplete="off" onclick="bookService('Coloration repousse')" >Choisir Service</a></h10>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- service 2 -->
+    <div class="col-md-3 py-3 py-md-0">
+      <div class="card">
+        <!--<img src="/Project1/images/Hair blogger _ Redken hair products, Hair salon tools, Hair salon pictures _ Hair salon pictures, Hair salon tools, Redken hair products (1).jpg" alt="">-->
+        <div class="card-body">
+          <h9>Coloration longueur</h9>
+          <div class="star">
+            <h10>85,00$ avant taxes <a href="#bookingService" type="button" class="btn btn-outline-dark" data-bs-toggle="button" autocomplete="off" onclick="bookService('Coloration longueur')" >Choisir Service</a></h10>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- service 3 -->
+    <div class="col-md-3 py-3 py-md-0">
+      <div class="card">
+        <!--<img src="/Project1/images/Hair blogger _ Redken hair products, Hair salon tools, Hair salon pictures _ Hair salon pictures, Hair salon tools, Redken hair products (1).jpg" alt="">-->
+        <div class="card-body">
+          <h9>Balayage / mèches</h9>
+          <div class="star">
+            <h10>147,00$ avant taxes <a href="#bookingService" type="button" class="btn btn-outline-dark" data-bs-toggle="button" autocomplete="off" onclick="bookService('Balayage / mèches')" >Choisir Service</a></h10>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- service 4 -->
+    <div class="col-md-3 py-3 py-md-0">
+      <div class="card">
+        <!--<img src="/Project1/images/Hair blogger _ Redken hair products, Hair salon tools, Hair salon pictures _ Hair salon pictures, Hair salon tools, Redken hair products (1).jpg" alt="">-->
+        <div class="card-body">
+          <h9>Nuanceur</h9>
+          <div class="star">
+            <h10>40,00$ avant taxes <a href="#bookingService" type="button" class="btn btn-outline-dark" data-bs-toggle="button" autocomplete="off" onclick="bookService('Nuanceur')" >Choisir Service</a></h10>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+  </div>
+</div>
   <!-- end of services -->
   </div>
 
@@ -485,14 +581,15 @@
         <div class="openhours">
           <h1>Nos heures d'ouverture</h1>
           <p1>En semaine: 7h - 18h</p1>
-          <p2>Fin de semain: 7h - 18h</p2>
+          <p2>Fin de semain: 10h - 18h</p2>
         </div>
 
         <div class="contactus">
           <h1>Contactez-nous:</h1>
-          <p1>En-person: Diagon Alley, Ottawa, Ontario</p1>
+          <p1>En-person: <a href="https://goo.gl/maps/mzcmiviJ4HBosH4LA"> Diagon Alley, Ottawa, Ontario</a></p1>
+          <p2>E-mail: beauté@beauté.com</p2>
           <p2>Phone: 123-456-789</p2>
-          <p3>E-mail: beauté@beauté.com</p2>
+          
         </div>
 
         <div class="company">
@@ -541,7 +638,7 @@
         
 
       </div>
-      
+    
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
       <script src="/app.js"></script>
 </body>
