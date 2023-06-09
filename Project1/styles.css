@@ -46,7 +46,6 @@
   .bar a:hover,
   .bar a:focus {
     width: 100%;
-    color: #;
   }
 
   .bar a:hover::after,

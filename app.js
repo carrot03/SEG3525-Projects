@@ -23,6 +23,8 @@ function bookPro(proName) {
         }
     }
     goto('booking')
+    window.alert('Coiffeur a été choisi avec succès');
+    
 }
 
 function bookService(serviceName) {
@@ -35,6 +37,7 @@ function bookService(serviceName) {
         }
     }
     goto('booking')
+    window.alert('Service a été choisi avec succès');
 }
 
 function bookingSubmit() {

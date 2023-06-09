@@ -101,7 +101,7 @@
                   <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
                 </svg> -->
                 <li><a href="#services">Services & prix</a></li>
-                <li><a href="#coiffeuses">Nos Coiffeuses</a></li>
+                <li><a href="#coiffeuses">Coiffeurs</a></li>
                 <li><a href="#booking">Prise de Rendez-vous</a></li>
               </ul>
             </div>
@@ -172,7 +172,7 @@
                 width: 35rem;
               ">
               <div class="input-box">
-                <header>Ici où la magie opère!</header>
+                <header></header>
                 <div class="input-field" style="
                 width: max-content;
                 ">
@@ -302,10 +302,11 @@
  
 
   <!-- services section -->
-  <div class="services" id="services" style="background-color: #F8F9F9; height:max-content">
+  <div class="services" id="services" style="background-color: #F8F9F9; height:max-content; ">
     <h7 class="text-center m-5 display-5 fw-bold">Nos Services</h7>
     <hr>
     <!-- Coupes & mises en plis -->
+    <div class="container-main" >
     <div class="container" style="margin-top: 20px ;">
       
       <div class="container-txt">
@@ -329,7 +330,7 @@
       
       <p>
         <a class="btn btn-dark"  onClick="showMore('showingSerives1')">
-          En savoir plus
+          List des services & prix
         </a>
       </p>
     </div>
@@ -415,7 +416,7 @@
     
     <p>
       <a class="btn btn-dark"  onClick="showMore('showingSerives2')">
-        En savoir plus
+        List des services & prix
       </a>
     </p>
   </div>
@@ -473,12 +474,38 @@
    
   </div>
 </div>
+</div>
+<div class="img-container" style="margin-top:2rem; padding:2rem 2rem;">
+  <h1 class="text-center">Examples de travaux</h1>
+  <div class="row" style="
+    margin-bottom: -10rem;
+    ">
+    <div class="col-sm-3"><img  style="
+      border: 4px solid black;
+      border-radius: 2rem;
+  " width="95%" height="60%" src="./images/How To Create The Classic, Timeless & Traditional Bridal Style.jpg">
+  
+</div>
+    <div class="col-sm-3"><img style="
+    border: 4px solid black;
+    border-radius: 2rem;
+" width="95%" height="60%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQItcLBEbzBuh32GML7DP1Nd4ivZcyq9jtiA&usqp=CAU"></div>
+    <div class="col-sm-3"><img style="
+    border: 4px solid black;
+    border-radius: 2rem;
+" width="95%" height="60%" src="https://i.pinimg.com/564x/c7/df/be/c7dfbe423504c6db3df45a6c24825cf8.jpg"></div>
+    <div class="col-sm-3"><img style="
+    border: 4px solid black;
+    border-radius: 2rem;
+" width="95%" height="60%" src="https://i.pinimg.com/236x/f3/4a/dc/f34adc07be60ff6d717293f006fdcebb.jpg"></div>
+  </div>
+</div>
   <!-- end of services -->
   </div>
 
   <!-- coiffeuses Section -->
   <div id="coiffeuses" class="coiffeuses" style="background-color: #F8F9F9;  width: 100%; height: 40rem;">
-    <h7 class="text-center m-5 display-5 fw-bold">Nos Coiffeuses</h7>
+    <h7 class="text-center m-5 display-5 fw-bold">Nos Coiffeurs</h7>
     <hr>
     <div class="container-all" style="background-color: #efe1da;width:100%;height: 100%; margin-top: -1rem;">
     <div class="container" >
@@ -503,6 +530,7 @@
               l'approche qu'elle a envers ses clientes. Vous ne verrez jamais Noémie de mauvaise humeur, elle est notre ''madame sourire'' au salon!</p>
             <p>Horaire: Du mercredi au samedi.</p>
             <a href="#booking" type="button" class="btn btn-outline-dark" data-bs-toggle="button" autocomplete="off" onclick="bookPro('Neomie')">Choisir Coiffeuse</a>
+            
             <!-- end of inner -->
           </div>
           <!-- end of flip-box-front -->
