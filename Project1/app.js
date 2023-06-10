@@ -85,10 +85,23 @@ function validate(email, pro, time, date, service, fullname, pass){
       alert("L'espace d'Email doit être remplie");
       return false;
     }
+    if (pass.value == "") {
+        alert("L'espace du mot de passe doit etre remplie");
+        return false;
+    }
+    if (fullname.value == "") {
+        alert("L'espace de Nom et Prenom doit etre remplie");
+        return false;
+    }
     if (pro.value == "") {
         alert("Un coiffeur doit etre choisi");
         return false;
       }
+
+    if (service.value == "") {
+        alert("Une service doit etre choisie");
+        return false;
+    }
     if (time.value == "") {
         alert("Un temps doit etre choisi");
         return false;
@@ -97,19 +110,8 @@ function validate(email, pro, time, date, service, fullname, pass){
         alert("Une date doit etre choisie");
         return false;
     }
-    if (service.value == "") {
-        alert("Une service doit etre choisie");
-        return false;
-    }
-    if (fullname.value == "") {
-        alert("L'espace de Nom et Prenom doit etre remplie");
-        return false;
-    }
     
-    if (pass.value == "") {
-        alert("L'espace du mot de passe doit etre remplie");
-        return false;
-    }
+
     
     return true;
 
