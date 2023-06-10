@@ -100,9 +100,9 @@
                 <!-- <svg xmlns="http://www.w3.org/2000/svg" width="85" height="35" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
                   <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
                 </svg> -->
-                <li><a href="#services">Services & prix</a></li>
-                <li><a href="#coiffeuses">Coiffeurs</a></li>
-                <li><a href="#booking">Prise de Rendez-vous</a></li>
+                <li class="nav-item"><a href="#services">Services & prix</a></li>
+                <li class="nav-item"><a href="#coiffeuses">Coiffeurs</a></li>
+                <li class="nav-item"><a href="#booking">Prise de Rendez-vous</a></li>
               </ul>
             </div>
             </div>
@@ -163,6 +163,12 @@
       <div  id="booking" class="booking" style="background-color: #F8F9F9; height: 35rem;">
         <h12 class="text-center m-5 display-5 fw-bold">Réserver un Rendez-vous</h12>
         <hr>
+        <div id="alertContainerS" class="alert alert-success mt-3 fixed-top text-center" style="display: none;">
+          <!--content defined in js-->
+        </div>
+        <div id="alertContainerF" class="alert alert-danger mt-3 fixed-top text-center " style="display: none;">
+          <!--content defined in js-->
+        </div>
         <div class="wrapper" >
           <div class="container main">
           <div class="row"  style="min-width: -webkit-fill-available;height: 40rem;">
@@ -265,8 +271,10 @@
       <div class="input-field" style="margin-top:2rem;">
         <input type="submit" class="btn btn-outline-dark"  style="border-radius: 5rem; border-width: 0.5rem; font-size: larger;" 
           id="submitAppointment" value="Réserve" onclick="bookingSubmit()"  >
+
     <!-- end of input field -->
     </div>
+    <script src="js/addons/rating.js"></script>
       <!-- end of input box-->
       </div>
        <div class="col-md-6 right" style="
@@ -275,7 +283,7 @@
        margin-top: -11.5rem;
       ">
       <div class="box" style="/* margin-top:-2rem; */margin-left: 1rem;">
-        <a href="#coiffeuses" class="btn btn-dark"> En savoir plus les coiffeuses</a>
+        <a href="#coiffeuses" class="btn btn-dark"> En savoir plus les coiffeurs</a>
 
         <a href="#services" class="btn btn-dark" style="margin-top:2rem;"> En savoir plus les services</a>
 
@@ -343,7 +351,7 @@
           <div class="card-body" >
             <h9>Coupe & mise en plis</h9>
             <div class="star">
-              <h10>De 64$ à 75$ avant taxes <a href="#bookingService" type="button" class="btn btn-outline-dark" data-bs-toggle="button" autocomplete="off" onclick="bookService('Coupe & mise en plis')" >Choisir Service</a></h10>
+              <h10>64,00$ avant taxes <a href="#bookingService" type="button" class="btn btn-outline-dark" data-bs-toggle="button" autocomplete="off" onclick="bookService('Coupe & mise en plis')" >Choisir Service</a></h10>
             </div>
           </div>
         </div>
@@ -355,7 +363,7 @@
           <div class="card-body">
             <h9>Mise en plis</h9>
             <div class="star">
-              <h10>De 38$ à 53$ avant taxes <a href="#bookingService" type="button" class="btn btn-outline-dark" data-bs-toggle="button" autocomplete="off" onclick="bookService('Mise en plis')" >Choisir Service</a></h10>
+              <h10>38,00$ avant taxes <a href="#bookingService" type="button" class="btn btn-outline-dark" data-bs-toggle="button" autocomplete="off" onclick="bookService('Mise en plis')" >Choisir Service</a></h10>
             </div>
           </div>
         </div>
@@ -367,7 +375,7 @@
           <div class="card-body">
             <h9>Frange</h9>
             <div class="star">
-              <h10>De 19$ à 23,50$ avant taxes <a href="#bookingService" type="button" class="btn btn-outline-dark" data-bs-toggle="button" autocomplete="off" onclick="bookService('Frange')" >Choisir Service</a></h10>
+              <h10>23,50$ avant taxes <a href="#bookingService" type="button" class="btn btn-outline-dark" data-bs-toggle="button" autocomplete="off" onclick="bookService('Frange')" >Choisir Service</a></h10>
             </div>
           </div>
         </div>
@@ -380,7 +388,7 @@
           <div class="card-body">
             <h9>Occasion spéciale (mariage & bal)</h9>
             <div class="star">
-              <h10>De 75$ à 165$ avant taxes <a href="#bookingService" type="button" class="btn btn-outline-dark" data-bs-toggle="button" autocomplete="off" onclick="bookService('Occasion spéciale (mariage & bal)')" >Choisir Service</a></h10>
+              <h10>165,00$ avant taxes <a href="#bookingService" type="button" class="btn btn-outline-dark" data-bs-toggle="button" autocomplete="off" onclick="bookService('Occasion spéciale (mariage & bal)')" >Choisir Service</a></h10>
             </div>
           </div>
         </div>
@@ -516,6 +524,7 @@
       style="background-image: url(https://cdn.shopify.com/s/files/1/0624/4279/9337/files/MCoiffure7_21eb697a-8179-46a4-8827-9fad94122bbf.jpg?v=1655399469&width=600);">
         <div class="inner color-white">
           <h3 class="flip-box-header">Neomie</h3>
+          
           <p>SPÉCIALITÉ : balayage, mèches, coloration, coupe cheveux courts/longs, chignon/mise en plis pour occassion spéciale et traitement à la kératine.</p>
           <!-- end of inner -->
         </div>
@@ -529,6 +538,17 @@
             <p>Noémie a débutée très jeune sa carrière dans le domaine de la coiffure. Ce qui lui donne des années d'expériences autant dans ses techniques que dans 
               l'approche qu'elle a envers ses clientes. Vous ne verrez jamais Noémie de mauvaise humeur, elle est notre ''madame sourire'' au salon!</p>
             <p>Horaire: Du Mercredi au Samedi.</p>
+            <div class="container">
+              <!--stars rating-->
+              <div class="rating">
+                <span class="star">&#9734;</span>
+                <span class="star">&#9734;</span>
+                <span class="star">&#9734;</span>
+                <span class="star">&#9734;</span>
+                <span class="star">&#9734;</span>
+              </div>
+            </div>
+
             <a href="#booking" type="button" class="btn btn-outline-dark" data-bs-toggle="button" autocomplete="off" onclick="bookPro('Neomie')">Choisir Coiffeuse</a>
             
             <!-- end of inner -->
@@ -559,7 +579,16 @@
             <p>Passionnée par la chimie de la coiffure, Manu adore concocter des beaux blonds ou des tons sur tons pour un effet 
               soleil des plus naturel. Sa créativité contagieuse et sa volonté à toujours vouloir se surpasser sont des apports indispensables à notre équipe.</p>
             <p>Horaire: Du Mardi au Jeudi.</p>
+              <!--stars rating-->
+              <div class="rating">
+                <span class="star">&#9734;</span>
+                <span class="star">&#9734;</span>
+                <span class="star">&#9734;</span>
+                <span class="star">&#9734;</span>
+                <span class="star">&#9734;</span>
+              </div>
             <a href="#booking" type="button" class="btn btn-outline-dark" data-bs-toggle="button" autocomplete="off" onClick="bookPro('Emmanuelle')">Choisir Coiffeuse</a>
+            
           </div>
           <!-- end of flip-box-front -->
           </div>
@@ -575,6 +604,7 @@
         <div class="inner color-white">
           <h3 class="flip-box-header">Marie-Eve</h3>
           <p>SPÉCIALITÉ : balayage, coloration, correction de couleur, coupe cheveux courts/longs et traitement à la kératine.</p>
+          
           <!-- end of inner -->
         </div>
         <!-- end of flip-box-front -->
@@ -583,12 +613,22 @@
         <div class="flip-box-back text-center" 
         style="background-color: #e3ccc0">
           <div class="inner color-white">
+            
             <p>Billingue</p>
             <p>Coloriste certifiée Redken</p>
             <p>Marie-Ève à débutée très tôt sa carrière dans la coiffure, ce qui fait d'elle une passionnée de son métier. 
               Une correction de couleur = un challenge accepté par elle. Elle aime transformer les cheveux de ses clientes.</p>
             <p>Horaire: Du Lundi au Dimanche.</p>
+              <!--stars rating-->
+              <div class="rating">
+                <span class="star">&#9734;</span>
+                <span class="star">&#9734;</span>
+                <span class="star">&#9734;</span>
+                <span class="star">&#9734;</span>
+                <span class="star">&#9734;</span>
+              </div>
             <a href="#booking" type="button" class="btn btn-outline-dark" data-bs-toggle="button" autocomplete="off" onClick="bookPro('Marie-Eve')">Choisir Coiffeuse</a>
+            
           </div>
           <!-- end of flip-box-front -->
           </div>
@@ -603,6 +643,7 @@
       <!-- end of container-all -->
     </div>
   <!-- end of section -->
+  <script src="js/addons/rating.js"></script>
   </div>
 
       <!-- footer Section -->

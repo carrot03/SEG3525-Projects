@@ -23,8 +23,15 @@ function bookPro(proName) {
         }
     }
     goto('booking')
-    window.alert('Coiffeur a été choisi avec succès');
-    
+    //window.alert('Coiffeur a été choisi avec succès');
+
+    var alertContainerS = document.getElementById('alertContainerS');
+    var message = "Coiffeur a été choisi avec succès";
+    alertContainerS.textContent = message;
+    alertContainerS.style.display = 'block';
+    setTimeout(function() {
+        alertContainerS.style.display = 'none';
+      }, 2000);
 }
 
 function bookService(serviceName) {
@@ -37,7 +44,15 @@ function bookService(serviceName) {
         }
     }
     goto('booking')
-    window.alert('Service a été choisi avec succès');
+    //window.alert('Service a été choisi avec succès');
+
+    var alertContainerS = document.getElementById('alertContainerS');
+    var message = "Service a été choisi avec succès";
+    alertContainerS.textContent = message;
+    alertContainerS.style.display = 'block';
+    setTimeout(function() {
+        alertContainerS.style.display = 'none';
+      }, 2000);
 }
 
 function bookingSubmit() {
@@ -49,9 +64,20 @@ function bookingSubmit() {
     service = document.getElementById('selectedService')
     pass = document.getElementById('Password')
 
+    var alertContainerS = document.getElementById('alertContainerS');
+    //alertContainer.style.display = 'block';
+    //alertContainer.style.display = 'none';
+      
+
     if (validate(email, pro, time, date, service, fullName, pass)) {
-        window.alert("Thank you " + fullName.value + " for booking with " + pro.value + " at " + time.value + " on " + date.value  + "... A confirmation Email has been sent to: " + email.value)
+        var message = "Thank you " + fullName.value + " for booking with " + pro.value + " at " + time.value + " on " + date.value  + "... A confirmation Email has been sent to: " + email.value;
+        alertContainerS.textContent = message;
+        alertContainerS.style.display = 'block';
+        setTimeout(function() {
+            alertContainerS.style.display = 'none';
+          }, 3000);
     }
+    //alertContainer.style.display = 'none';
     //validate time input
     /*var timeInput = document.getElementById("timeInput");
     var dateInput = document.getElementById("dateInput");
@@ -81,33 +107,69 @@ function bookingSubmit() {
 }
 
 function validate(email, pro, time, date, service, fullname, pass){
+    var alertContainerF = document.getElementById('alertContainerF');
     if (email.value == "") {
-      alert("L'espace d'Email doit être remplie");
+      var message = "L'espace d'Email doit être remplie";
+      alertContainerF.textContent = message;
+      alertContainerF.style.display = 'block';
+      setTimeout(function() {
+        alertContainerF.style.display = 'none';
+        }, 2000);
       return false;
     }
     if (pass.value == "") {
-        alert("L'espace du mot de passe doit etre remplie");
+        var message = "L'espace du mot de passe doit etre remplie";
+        alertContainerF.textContent = message;
+        alertContainerF.style.display = 'block';
+        setTimeout(function() {
+            alertContainerF.style.display = 'none';
+          }, 2000);
         return false;
     }
     if (fullname.value == "") {
-        alert("L'espace de Nom et Prenom doit etre remplie");
+        var message = "L'espace de Nom et Prenom doit etre remplie";
+        alertContainerF.textContent = message;
+        alertContainerF.style.display = 'block';
+        setTimeout(function() {
+            alertContainerF.style.display = 'none';
+          }, 2000);
         return false;
     }
     if (pro.value == "") {
-        alert("Un coiffeur doit etre choisi");
+        var message = "Un coiffeur doit etre choisi";
+        alertContainerF.textContent = message;
+        alertContainerF.style.display = 'block';
+        setTimeout(function() {
+            alertContainer.style.display = 'none';
+          }, 2000);
         return false;
       }
 
     if (service.value == "") {
-        alert("Une service doit etre choisie");
+        var message = "Une service doit etre choisie";
+        alertContainerF.textContent = message;
+        alertContainerF.style.display = 'block';
+        setTimeout(function() {
+            alertContainerF.style.display = 'none';
+          }, 2000);
         return false;
     }
     if (time.value == "") {
-        alert("Un temps doit etre choisi");
+        var message = "Un temps doit etre choisi";
+        alertContainerF.textContent = message;
+        alertContainerF.style.display = 'block';
+        setTimeout(function() {
+            alertContainerF.style.display = 'none';
+          }, 2000);
         return false;
     }
     if (date.value == "") {
-        alert("Une date doit etre choisie");
+        var message = "Une date doit etre choisie";
+        alertContainerF.textContent = message;
+        alertContainerF.style.display = 'block';
+        setTimeout(function() {
+            alertContainerF.style.display = 'none';
+          }, 2000);
         return false;
     }
     
@@ -117,3 +179,24 @@ function validate(email, pro, time, date, service, fullname, pass){
 
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+    const stars = document.querySelectorAll('.rating .star');
+  
+    stars.forEach(function(star, index) {
+      star.addEventListener('click', function() {
+        stars.forEach(function(s, i) {
+          if (i <= index) {
+            s.classList.toggle('checked');
+          }
+        });
+      });
+    });
+  });
+  
+  
+  
+  
+  
+  
+  
+  
