@@ -3,7 +3,7 @@ import { I18nextProvider } from 'react-i18next';
 import i18n from './i18n';
 import NavBar from "./NavBar/NavBar.js";
 import Hero from "./Hero/Hero.js";
-import Menu from "./Menu/MenuItem.js";
+import Menu from "./Menu/Menu.js";
 import './App.css';
 
 function App() {
