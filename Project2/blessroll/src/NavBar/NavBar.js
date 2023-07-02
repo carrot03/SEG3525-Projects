@@ -40,6 +40,7 @@ function NavBar() {
             <Nav.Link href="#vlogs">{t('NavBar-vlogs')}</Nav.Link>
             <Nav.Link href="#contactus">{t('NavBar-contactus')}</Nav.Link>
             <Nav.Link href="#virtualtable">{t('NavBar-virtualtable')}</Nav.Link>
+            <Nav.Link href="#reviews">{t('NavBar-reviews')}</Nav.Link>
           </Nav>
           <Nav>
             <NavDropdown title="Language" id="basic-nav-dropdown">

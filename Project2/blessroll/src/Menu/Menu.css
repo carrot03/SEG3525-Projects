@@ -1,0 +1,18 @@
+div.menu_header {
+    width: 90%;
+    margin: 0% 4% auto;
+}
+
+div.menu_header p {
+    font-size: xx-large;
+    font-style: normal;
+}
+
+div.table_header {
+    width: 90%;
+    margin: 2% 4% auto;
+}
+
+div.table {
+    margin: 0% 4% auto;
+}

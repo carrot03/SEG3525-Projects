@@ -4,7 +4,10 @@ import i18n from './i18n';
 import NavBar from "./NavBar/NavBar.js";
 import Hero from "./Hero/Hero.js";
 import Menu from "./Menu/Menu.js";
+import Review from "./Reviews/Review.js";
+import Contactus from "./Contactus/Contactus";
 import './App.css';
+
 
 function App() {
 	const [pageScroll, setPageScroll] = useState(0);
@@ -16,12 +19,14 @@ function App() {
 	}, []);
 
 	return (
-		<>
-    <I18nextProvider i18n={i18n}></I18nextProvider>
-    <NavBar/>
-	<Hero/>
-	<Menu />
-		</>
+	<>
+    	<I18nextProvider i18n={i18n}></I18nextProvider>
+    	<NavBar/>
+		<Hero/>
+		<Menu />
+		<Review/>
+		<Contactus/>
+	</>
 	);
 }
 

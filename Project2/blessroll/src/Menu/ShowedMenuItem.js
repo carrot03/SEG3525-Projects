@@ -6,7 +6,7 @@ import {Container, Col, Button, Row} from 'react-bootstrap';
 import { useTranslation } from 'react-i18next'; // Import the useTranslation hook 
 
 
-function MenuItem({ name, price, description, ingredients, updateTable, itemId }) {
+function ShowedMenuItem({ name, price, description, ingredients}) {
     return (
       <Card className="m-2" style={{ width: '18rem' }}>
         <Card.Body>
@@ -26,8 +26,8 @@ function MenuItem({ name, price, description, ingredients, updateTable, itemId }
             </Row>
           </Card.Text>
           <Container className="text-center">
-            <Button onClick={() => updateTable(itemId)}>
-              Add
+            <Button >
+              Remove
             </Button>
           </Container>
         </Card.Body>
@@ -36,4 +36,4 @@ function MenuItem({ name, price, description, ingredients, updateTable, itemId }
   }
   
 
-export default MenuItem;
+export default ShowedMenuItem;
