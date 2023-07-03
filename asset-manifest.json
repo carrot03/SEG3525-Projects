@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Project2/blessroll/static/css/main.03a8acc8.css",
+    "main.js": "/Project2/blessroll/static/js/main.e70959aa.js",
+    "static/js/787.6863d74f.chunk.js": "/Project2/blessroll/static/js/787.6863d74f.chunk.js",
+    "index.html": "/Project2/blessroll/index.html",
+    "main.03a8acc8.css.map": "/Project2/blessroll/static/css/main.03a8acc8.css.map",
+    "main.e70959aa.js.map": "/Project2/blessroll/static/js/main.e70959aa.js.map",
+    "787.6863d74f.chunk.js.map": "/Project2/blessroll/static/js/787.6863d74f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.03a8acc8.css",
+    "static/js/main.e70959aa.js"
+  ]
+}
