@@ -36,7 +36,7 @@ function NavBar() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="#about">{t('NavBar-about')}</Nav.Link>
-            <Nav.Link href="#menu">{t('NavBar-menu')}</Nav.Link>
+            <Nav.Link href="#menu">{t('NaBar-menu')}</Nav.Link>
             <Nav.Link href="#vlogs">{t('NavBar-vlogs')}</Nav.Link>
             <Nav.Link href="#contactus">{t('NavBar-contactus')}</Nav.Link>
             <Nav.Link href="#virtualtable">{t('NavBar-virtualtable')}</Nav.Link>
